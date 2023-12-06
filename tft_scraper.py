@@ -11,8 +11,7 @@ from tft import TFT
 
 class TFTScraper:
     def __init__(self):
-        self.driver = webdriver.Firefox()
-        self.wait = WebDriverWait(self.driver, 5)
+        self.driver = webdriver.Chrome()
         self.url = "https://www.eii.ulpgc.es/es/informacionacademica/tft/ofertatft"
         self.scraped_pages = 0
         self.scraped_results = 0
