@@ -7,7 +7,7 @@ Versión de Python >= 3.11
 ## Instalación:
 ```
 git clone https://github.com/Alejandro-M-Cruz/tft-scraper
-cd web-scraper
+cd tft-scraper
 pip install -r requirements.txt
 ```
 
