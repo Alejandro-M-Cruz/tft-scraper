@@ -9,6 +9,9 @@ def main(query: str | None, file_path: str):
         tfts = [eval(tft_string) for tft_string in f.read().split(TFT.separator)]
     if query:
         tfts = TFTSearcher(tfts, query).search()
+    if len(tfts) == 0:
+        print("No results found")
+        return
     with open(file_path, "w") as f:
         f.write("\n".join([str(tft) for tft in tfts]))
     print(f"Stored {len(tfts) if query else 'all'} results in {file_path}")
