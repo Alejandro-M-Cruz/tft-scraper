@@ -9,4 +9,4 @@ class TFTSearcher:
         self.query = query
 
     def search(self) -> list[TFT]:
-        return [tft for tft in self.tfts if self.query.casefold() in str(tft).casefold()]
+        return [tft for tft in self.tfts if tft.contains_query(self.query)]

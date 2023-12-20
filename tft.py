@@ -17,3 +17,6 @@ class TFT:
                 f"\n"
                 f"[Enlace]({self.source})\n"
                 f"\n")
+
+    def contains_query(self, query: str):
+        return query in (self.title + self.description + self.contact).casefold()
